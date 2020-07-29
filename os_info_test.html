@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var info = navigator.userAgent.toLowerCase();
+        // 운영체제 정보를 구한다. 구한 정보를 소문자로 치환한다.
+        var oslmg = null;
+
+        if( info.indexOf('windows') >= 0) {
+            oslmg = "windows.png";
+        } else if(info.indexOf('macintosh') >= 0){
+            oslmg = "macintosh.jpg";
+        } else if(info.indexOf('iphone') >= 0) {
+            oslmg = "iphone.jpg";
+        } else if (info.indexOf('android') >= 0) {
+            oslmg = "android.png";
+        }
+
+        document.write("<img src = \"/Users/hanseongjun/Documents/Study/" + oslmg + "\">", "<br>");
+        var scr = screen;
+        var sc_W = scr.width;
+        var sc_H = scr.height;
+
+        document.write("모니터 해상도 너비 = " + sc_W + "px", "<br>");
+        document.write("모니터 해상도 높이 = " + sc_H + "px", "<br>");
+    </script>
+</body>
+</html>
